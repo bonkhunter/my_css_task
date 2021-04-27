@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'barlowregular';
+    src: url("Barlow-Regular-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: barlowbold;
+    src: url("Barlow-Bold-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container-1{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 1000px;
+    margin: 50px auto;
+}
+
+.box-1{
+    width: 759px;
+    height: 1000px;
+}
+
+.box-2{
+    width: 681px;
+    height: 1000px;
+    background-color: #FFFFFF;
+    font-family: barlowregular;
+}
+
+.box-3{
+    margin-left: 70px;
+    margin-top: 100px;
+    justify-items: left;
+}
+
+#logo{
+    width: 130px;
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.heading{
+    color: #28495a;
+    font-size: x-large;
+}
+
+.p1{
+    color: #a8b5bb;
+    font-size: medium;
+}
+
+.facebookbutton{
+    position: absolute;
+    margin-top: 50px;
+}
+
+.facebookbutton a{
+    text-decoration: none;
+    background-color: #255b9b;
+    padding: 15px 50px 15px 50px;
+    color: white;
+    background-image: url("//D:/WebstormProjects/verstka/facebook.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    background-position: top 11px left 10px;
+}
+
+.facebookbutton a:hover{
+    background-color: #164986;
+}
+
+.linkedinbutton{
+    margin-top: 50px;
+    float: right;
+    margin-right: 30px;
+}
+
+.linkedinbutton a{
+    text-decoration: none;
+    background-color: #255b9b;
+    padding: 15px 50px 15px 50px;
+    color: white;
+    background-image: url("//D:/WebstormProjects/verstka/linkedin.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    background-position: top 11px left 10px;
+}
+
+.linkedinbutton a:hover{
+    background-color: #164986;
+}
+
+.separate{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30%;
+    margin-right: 25%;
+    margin-left: 20%;
+}
+
+.separate::before,
+.separate::after{
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #a8b5bb;
+}
+
+.separate:not(:empty)::before {
+    margin-right: 5px;
+}
+
+.separate:not(:empty)::after {
+    margin-left: 5px;
+}
+
+.container-form{
+    display: inline-flex;
+    margin-top: 10%;
+}
+
+.form-control {
+    width: 250px;
+    font-family: barlowregular, sans-serif;
+    position: relative;
+    padding-right: 25px;
+    margin-left: 35px;
+}
+
+.form-control input {
+    display: block;
+    outline: none;
+    width: 100%;
+    background: #fff;
+    border: 1px solid lightgray;
+    padding: 15px;
+    font-size: 16px;
+    color: #500;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.form-control label {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    color: #aaa;
+    font-size: 16px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+
+.form-control input:valid + label,
+.form-control input:focus + label {
+    top: 2px;
+    font-size: 14px;
+}
+
+.heading2{
+    color: #28495a;
+    font-size: 18px;
+    margin-top: 10%;
+}
+
+.p2{
+    color: #a8b5bb;
+    font-size: 14px;
+}
+
+.radiobuttons{
+    display: inline-flex;
+    margin-top: 5%;
+}
+
+.radio-check{
+    display: inline-flex;
+    position: relative;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.custom-radio{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-radio+label{
+    font-family: barlowregular;
+    font-size: 14px;
+    font-weight: normal;
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 5px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    margin-bottom: 0.2em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+
+.custom-radio:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+.custom-radio:checked+label::before {
+    border-color: #0b76ef;
+    border-width: 5px;
+}
+
+.infoicon{
+    position: relative;
+    margin-top: 13px;
+}
+
+.tooltipcontent{
+    visibility: hidden;
+    width: 180px;
+    text-align: left;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 2px 1px lightgray;
+    margin-top: 15px;
+    display: block;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltipcontent{
+    visibility: visible;
+}
+
+.agreement{
+    margin-top: 20%;
+    font-family: barlowregular;
+    color: #a8b5bb;
+}
+
+.accountbutton{
+    margin-top: 10%;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    background: #3698fb;
+    padding-top: 12px;
+    padding-left: 60px;
+}
+
+.accountbutton a{
+    text-decoration: none;
+    font-family: barlowbold;
+    color: white;
+}
